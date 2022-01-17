@@ -19,9 +19,18 @@ function slideshowNext() {
     }
 
     slides[slideIndex].classList.add("visible");
-    
 }
 
 function slideshowPrev() {
+    let slides = document.getElementsByClassName("slide");
 
+    slides[slideIndex].classList.remove("visible");
+
+    slideIndex -= 1;
+
+    if (slideIndex <= 0 ) {
+        SlideIndex = slides.length - 1;
+    }
+
+    slides[slideIndex].classList.add("visible");
 }
